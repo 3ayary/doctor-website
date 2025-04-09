@@ -1,17 +1,16 @@
 import React from 'react'
 
-const Card = () => {
+const Card = (props) => {
   return (
     <div
-    className="w-64  bg-white shadow-sm rounded-[5px] p-12 space-y-3 relative overflow-hidden"
+    className="w-64 bg-white shadow-sm rounded-[5px] p-12 space-y-3 relative overflow-hidden"
   >
     <div className="w-24 h-24 bg-[#002364] rounded-full absolute -right-5 -top-7">
     </div>
     
-    <h1 className="font-bold text-xl mt-[12%]">UI / UX Creative Desing</h1>
+    <h1 className="font-bold text-xl mt-[12%]">{props.title}</h1>
     <p className="text-sm text-zinc-500 leading-6">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse fuga
-      adipisicing elit
+    {props.content}
     </p>
   </div>
   
