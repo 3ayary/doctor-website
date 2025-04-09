@@ -3,7 +3,7 @@ import Link from 'next/link';
 const Navbar = () => {
   return (
     <div className="flex sticky flex-col top-0 z-50 justify-between items-center bg-white shadow-md p-4  lg:flex-row  ">
-      <img src="logo.png" className="w-[50px] h-[50px]" />
+      <img src="/logo.png" className="w-[50px] h-[50px]" />
 
       <div className="space-x-4 m-3">
       <Link href="/">

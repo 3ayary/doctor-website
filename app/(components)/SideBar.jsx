@@ -1,4 +1,4 @@
-"use client";
+"use client"  
 import Link from "next/link";
 
 import { useState } from "react";
@@ -32,7 +32,7 @@ const SideBar = () => {
       </div>
 
       <div className="flex flex-col items-center justify-center mb-[5%]">
-        <img src="logo.png" className={ open ? "w-[40px] lg:w-[50px] lg:h-[50px] h-[40px] mb-[3%]" :"w-[0px] lg:w-[50px] lg:h-[50px] h-[0px] mb-[3%]"} />
+        <img src="/logo.png" className={ open ? "w-[40px] lg:w-[50px] lg:h-[50px] h-[40px] mb-[3%]" :"w-[0px] lg:w-[50px] lg:h-[50px] h-[0px] mb-[3%]"} />
 
         {open ? (
           <h1 className="text-[20px] font-bold mb-[5%]">Dashboard</h1>
@@ -64,7 +64,7 @@ const SideBar = () => {
           </button>
         </Link>
 
-        <Link href="/dashboard/Content">
+        <Link href="/dashboard/content">
           <button className="text-start flex rounded px-6 py-3 font-medium w-[100%] cursor-pointer text-black opacity-100 hover:bg-[#ECEDF8]"
   
           >
@@ -86,7 +86,7 @@ const SideBar = () => {
           </button>
         </Link>
 
-        <Link href="/dashboard/Schedule">
+        <Link href="/dashboard/schedule">
           <button className="text-start rounded flex  px-6 py-3 font-medium w-[100%] cursor-pointer text-black opacity-100  hover:bg-[#ECEDF8]"
           >
             <svg

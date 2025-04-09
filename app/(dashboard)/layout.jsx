@@ -6,7 +6,7 @@ export default function PageLayout({ children }) {
   
       <div className="flex flex-row w-full h-screen ">
          <SideBar/>
-        <div className="flex flex-col w-full h-screen">
+        <div className="flex flex-col w-[100%] justify-around h-screen">
         {children}
         </div>
         </div>

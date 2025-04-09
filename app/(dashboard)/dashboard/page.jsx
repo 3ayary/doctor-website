@@ -10,6 +10,9 @@ const page = () => {
         <DashboardCards title="New Patients" content="" time="5" subContent="This Week" />
         <DashboardCards title="Clinic Status" content="Open" time="" />
         <DashboardCards title="Today's Revenue" time="" subContent="$1,250" />
+
+
+
       </div>
 <div>
   
