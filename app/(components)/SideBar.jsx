@@ -7,9 +7,10 @@ const SideBar = () => {
   const [open, setOpen] = useState(false);
   return (
     <div
-      className={`flex flex-col bg-white shadow-md p-4 ${
-        open ? " lg:w-[15%]" : " w-[15%] lg:w-[8%]"
-      } h-[100%] relative duration-300 ]`}
+
+    className={`flex flex-col bg-white shadow-md p-4 ${
+      open ? "lg:w-[12%]" : "w-[12%] lg:w-[8%]"
+    } h-screen fixed z-50 duration-300`}
     >
       <div
         className={`bg-[#ECEDF8] rounded-full flex justify-center items-center absolute -right-4 top-9 w-[40px] h-[40px] border border-[#002364] cursor-pointer ${!open && "rotate-180"}`}

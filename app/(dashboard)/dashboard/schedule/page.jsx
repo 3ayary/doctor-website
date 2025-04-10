@@ -90,9 +90,13 @@ const SchedulePage = () => {
           {appointments.map((appt, index) => (
             <li
               key={index}
-              className="w-64 bg-white shadow-sm rounded-[5px] p-12 space-y-3 relative overflow-hidden"
+              className="w-64 bg-white shadow-sm rounded-[5px] p-12 space-y-3  relative  "
             >
+               <div className="w-8 h-8 text-white text-center cursor-pointer bg-[#002364] rounded-full absolute -right-4 -top-3">
+                x
+               </div>
               <div>
+                
                 <p className="text-sm text-gray-500">{appt.time}</p>
                 <p className="text-lg font-semibold">{appt.patient}</p>
                 <p className="text-sm text-gray-600">{appt.type}</p>
