@@ -3,10 +3,8 @@ const DashboardInput = () => {
     <div className="w-200 h-auto bg-white shadow-sm rounded-[5px] p-12 space-y-4 relative overflow-hidden">
     <div className="w-24 h-24 bg-[#002364] rounded-full absolute -right-5 -top-7"></div>
   
-    <h1 className="font-bold text-xl mt-[12%]">Contact Us</h1>
-    <p className="text-sm text-zinc-500 leading-6">
-      Please fill in the form below and we'll get back to you.
-    </p>
+    <h1 className="font-bold text-xl mt-[12%]">Add Card to Home Page</h1>
+   
   
     <form className="space-y-3">
       <input

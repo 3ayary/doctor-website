@@ -1,3 +1,7 @@
+"use client";
+import AddSchedule from "@/app/(components)/AddSchedule";
+import { useState } from "react";
+
 const SchedulePage = () => {
   const appointments = [
     {
@@ -74,23 +78,34 @@ const SchedulePage = () => {
     },
   ];
 
+
   const statusColor = {
     confirmed: "text-green-600 bg-green-100",
     pending: "text-yellow-600 bg-yellow-100",
     cancelled: "text-red-600 bg-red-100",
   };
 
-  return (
-    <div className="p-6 max-w-7xl mx-auto">
-      <h2 className="text-2xl font-bold mb-6">Today's Appointments</h2>
+ 
+  const [editStates, setEditStates] = useState({});
 
-      <ul className="grid grid-cols-4 gap-6">
+  const toggleEdit = (index) => {
+    setEditStates((prev) => ({
+      ...prev,
+      [index]: !prev[index],
+    }));
+  };
+
+  return (
+    <div className="p-6 max-w-7xl mx-auto ">
+      <h2 className="text-2xl font-bold mb-6">Today's Appointments</h2>
+<AddSchedule/>
+      <ul className="grid grid-cols-4 my-7 gap-6">
         {appointments.map((appt, index) => (
           <li
             key={index}
-            className="w-64 bg-white shadow-sm rounded-[5px] p-12 space-y-3  relative  "
+            className="w-64 bg-white shadow-sm rounded-[5px] p-12 space-y-3 relative"
           >
-            <div className="w-8 h-8 text-white  content-center place-items-center cursor-pointer bg-[#002364] rounded-full absolute -right-4 -top-3">
+            <div className="w-8 h-8 text-white content-center place-items-center cursor-pointer bg-[#002364] rounded-full absolute -right-4 -top-3">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -113,12 +128,40 @@ const SchedulePage = () => {
             </div>
 
             <span
-              className={`inline-block px-3 py-1 text-sm rounded-full font-medium ${
-                statusColor[appt.status]
-              }`}
+              className={`inline-block px-3 py-1 text-sm rounded-full font-medium ${statusColor[appt.status]}`}
             >
               {appt.status}
             </span>
+
+            <button className="inline-block px-3 py-1 text-sm rounded-full font-medium text-gray-600 bg-gray-100 cursor-pointer" onClick={() => toggleEdit(index)}>Edit</button>
+
+            {editStates[index] && (
+              <div className="flex flex-col space-y-4 p-5">
+                {["cancelled", "pending", "confirmed"].map((status) => (
+                  <label
+                    key={status}
+                    className="relative flex items-center cursor-pointer"
+                  >
+                    <input
+                      className="sr-only peer"
+                      type="radio"
+                      name={`status-${index}`}
+                    />
+                    <div
+                      className={`w-6 h-6 bg-transparent border-2 rounded-full transition duration-300 ease-in-out 
+                      ${
+                        status === "cancelled"
+                          ? "border-red-500 peer-checked:bg-red-500 peer-checked:border-red-500 peer-hover:shadow-red-500/50 peer-checked:shadow-red-500/50"
+                          : status === "pending"
+                          ? "border-yellow-500 peer-checked:bg-yellow-500 peer-checked:border-yellow-500 peer-hover:shadow-yellow-500/50 peer-checked:shadow-yellow-500/50"
+                          : "border-green-500 peer-checked:bg-green-500 peer-checked:border-green-500 peer-hover:shadow-green-500/50 peer-checked:shadow-green-500/50"
+                      } peer-hover:shadow-lg peer-checked:shadow-lg`}
+                    ></div>
+                    <span className="ml-2 text-zinc-500">{status}</span>
+                  </label>
+                ))}
+              </div>
+            )}
           </li>
         ))}
       </ul>
