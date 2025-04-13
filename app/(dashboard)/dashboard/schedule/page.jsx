@@ -158,8 +158,11 @@ const SchedulePage = () => {
                       } peer-hover:shadow-lg peer-checked:shadow-lg`}
                     ></div>
                     <span className="ml-2 text-zinc-500">{status}</span>
+                   
                   </label>
-                ))}
+                   
+                ) )}
+                 <button  className="w-15 bg-[#002364] text-white py-2 rounded-[5px] hover:bg-[#001c4f] ">save</button>
               </div>
             )}
           </li>

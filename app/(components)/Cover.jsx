@@ -1,3 +1,4 @@
+import Link from "next/link"
 
 const Cover = () => {
   return (
@@ -11,9 +12,11 @@ const Cover = () => {
       <p className="text-[#002364] text-2xl mb-6">
         We build modern and fast web experiences.
       </p>
+      <Link href="/book">
       <button className="inline-flex items-center px-6 py-3 font-medium rounded-md shadow-sm cursor-pointer text-white bg-[#5271ff] hover:bg-blue-700">
         Book Now
       </button>
+      </Link>
     </div>
   </div>
   )

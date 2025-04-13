@@ -16,11 +16,7 @@ const Footer = () => {
           Branches
         </button>
         </Link>
-        <Link href="/services">
-        <button className="opacity-100 cursor-pointer text-zinc-500 hover:text-[#5271ff]">
-          Services
-        </button>
-        </Link>
+       
       </div>
     </div>
   );
