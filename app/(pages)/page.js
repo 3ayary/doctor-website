@@ -12,13 +12,10 @@ export default function Home() {
         <Cover />
 
         <ul className="flex flex-wrap justify-center gap-6">
-
           {apiData.map((data, index) => (
-            
             <li key={index}>
               <Card title={data.title} content={data.content} />
             </li>
-
           ))}
         </ul>
       </div>
@@ -29,9 +26,9 @@ export default function Home() {
         </h1>
 
         <div className="flex mx-[5%] mb-[5%] justify-around flex-wrap w-[100%]">
-          <ItemsCard link="/dental" title="dental" />
-          <ItemsCard link="/Pediatrics" title="Pediatrics" />
-          <ItemsCard link="/Physical Therapy" title="Physical Therapy" />
+          <ItemsCard title="dental" />
+          <ItemsCard title="Pediatrics" />
+          <ItemsCard title="Physical Therapy" />
         </div>
       </div>
     </>

@@ -1,3 +1,4 @@
+import AddSchedule from "@/app/(components)/AddSchedule";
 import DashboardCards from "@/app/(components)/dashboardCards";
 import DashboardInput from "@/app/(components)/dashboardInput";
 const page = () => {
@@ -24,6 +25,15 @@ const page = () => {
         </h1>
 
         <DashboardInput />
+
+      </div>
+      <div className="flex flex-col items-center gap-10 justify-center my-10">
+        <h1 className=" m-5 text-3xl text-gray-700 font-bold">
+        Book Appointment
+        </h1>
+
+      <AddSchedule/>
+        
       </div>
     </div>
   );
